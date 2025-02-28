@@ -1,0 +1,78 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <h2>Admin Login</h2>
+        <input type="text" id="adminUsername" placeholder="Username" required>
+        <input type="password" id="adminPassword" placeholder="Password" required>
+        <button onclick="adminLogin()">Login</button>
+        <p id="adminMessage"></p>
+    </div>
+
+    <div id="dashboard" style="display: none;">
+        <h2>Admin Dashboard</h2>
+
+        <h3>Pending Credit Requests</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Credits Requested</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="creditRequestsTable">
+                <!-- Dynamic Requests Here -->
+            </tbody>
+        </table>
+
+        <h3>Analytics</h3>
+        <p>Total Users: <span id="totalUsers"></span></p>
+        <p>Pending Credit Requests: <span id="pendingRequests"></span></p>
+        <h4>User Credit Data</h4>
+        <ul id="userCreditList"></ul>
+    </div>
+    <div id="footer"></div>
+    <script src="js/include.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/credits.js"></script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <h3>System Analytics</h3>
+        <pre id="analyticsDisplay">Loading...</pre>
+
+        <h3>Approve Credit Requests</h3>
+        <button id="approveCreditsBtn">Approve Requests</button>
+
+        <button id="logoutBtn">Logout</button>
+    </div>
+    <div id="footer"></div>
+    <script src="js/include.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>-->
+
+

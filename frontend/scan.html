@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Document | Credit-Based Doc Scanner</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <h2>Upload & Scan Document</h2>
+
+        <form id="scanForm">
+            <input type="file" id="documentUpload" required>
+            <button type="submit">Scan Document</button>
+        </form>
+
+        <div id="loading" style="display: none;">Scanning...</div>
+        <h3>Matching Documents:</h3>
+        <ul id="scanResult"></ul>
+
+        <p><a href="profile.html">Back to Profile</a></p>
+    </div>
+    <div id="footer"></div>
+    <script src="js/include.js"></script>
+    <script src="js/scan.js"></script>
+    <script src="js/utils.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!localStorage.getItem("user_id")) {
+                alert("User not logged in. Redirecting to login page.");
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>
